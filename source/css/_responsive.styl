@@ -26,6 +26,26 @@
   .main-body-inner
     padding-left: sidebar-toggle-width
     background-position: -290px 0 !important
+
+    #sidebar-opener:checked ~ #sidebar
+      width: sidebar-width
+      overflow-y: auto
+      z-index: 2
+      transition: width 0.2s ease-in
+      .toggle
+        &:before
+          content: '\f100'
+      #article-nav, .widgets-container, .sidebar-top
+        opacity: 1
+        transition: opacity 0.2s ease-in 0.2s
+      .sidebar-top
+        display: block
+        .social-links
+          .social-tooltip
+            &:after,
+            &:before
+              display: none
+
     #sidebar
       clearfix()
       height: 100%
@@ -58,24 +78,6 @@
       #article-nav, .widgets-container, .sidebar-top
         opacity: 0
         transition: opacity 0.2s ease-in
-      &.expend
-        width: sidebar-width
-        overflow-y: auto
-        z-index: 2
-        transition: width 0.2s ease-in
-        .toggle
-          &:before
-            content: '\f100'
-        #article-nav, .widgets-container, .sidebar-top
-          opacity: 1
-          transition: opacity 0.2s ease-in 0.2s
-        .sidebar-top
-          display: block
-          .social-links
-            .social-tooltip
-              &:after,
-              &:before
-                display: none
 
   #main
     .main-body-header,
