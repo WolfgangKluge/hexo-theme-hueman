@@ -1,0 +1,27 @@
+index:
+  home: 'home'
+  search: 'Suche'
+  archive: 'Archiv'
+  category: 'Kategorie : '
+  uncategorized: ' '
+  tag: 'Tag : '
+nav:
+  more: 'Mehr'
+  current_page:
+    other: 'Seite %d '
+  total_page:
+    other: 'von %d'
+sidebar:
+  expand: 'Sidebar anzeigen'
+  follow: 'Folgen'
+  newer: 'neuer'
+  older: 'älter'
+  recents: 'Neueste Artikel'
+  archives: 'Archive'
+  categories: 'Kategorien'
+  links: 'Links'
+  tags: 'Tags'
+  tag_cloud: 'Tag cloud'
+article:
+  comments: 'Kommentare'
+  share: 'Teilen'
