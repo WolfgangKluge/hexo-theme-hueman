@@ -16,7 +16,7 @@
           <input type="checkbox" id="main-nav-opener" style="display: none;">
           <label for="main-nav-opener" id="main-nav-toggle" class="nav-icon"></label>
           <div class="nav-container-inner">
-            <ul id="main-nav">
+            <ul id="main-nav" data-more-text="<%= __('nav.more') %>">
               <% for (var i in theme.menu){
                   if(i == 'Categories'){ %>
                     <%- list_categories({show_count: false, depth: 2, class: 'main-nav', style: 'list'}).replace(/^<ul\b[^>]*>\s*|\s*<\/ul>$/g, '') %>
