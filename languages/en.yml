@@ -12,6 +12,7 @@ nav:
   total_page:
     other: 'of %d'
 sidebar:
+  expand: 'Expand Sidebar'
   follow: 'follow'
   newer: 'newer'
   older: 'older'

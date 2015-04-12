@@ -12,6 +12,7 @@ nav:
   total_page:
     other: '共 %d 页'
 sidebar:
+  expand: 'Expand Sidebar'
   follow: '关注我 '
   newer: '下一篇'
   older: '上一篇'
