@@ -103,9 +103,13 @@
     }
   });
 
+  var resizeTimeout;
   $(window).resize(function() {
-    setThumbnailHeight();
-    autoHideMenus();
+    clearTimeout(resizeTimeout);
+    resizeTimeout = setTimeout(function () {
+      setThumbnailHeight();
+      autoHideMenus();
+    }, 120);
   });
 
 })(jQuery);
