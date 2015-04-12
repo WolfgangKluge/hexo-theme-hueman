@@ -80,7 +80,8 @@
   }
 
   //Back to top
-  $("#back-to-top").on('click', function(){  
+  $("#back-to-top").on('click', function(ev){
+    ev.preventDefault();
     $('body,html').animate({scrollTop:0}, 600);
   }); 
 })(jQuery);
