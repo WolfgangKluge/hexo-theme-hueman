@@ -6,6 +6,7 @@ index:
   uncategorized: 'uncategorized'
   tag: 'tag : '
 nav:
+  more: 'More'
   current_page:
     other: 'Page %d '
   total_page:

@@ -15,7 +15,7 @@
         <div id="header-inner" class="nav-container">
           <a id="main-nav-toggle" class="nav-icon"></a>
           <div class="nav-container-inner">
-            <ul id="main-nav">
+            <ul id="main-nav" data-more-text="<%= __('nav.more') %>">
               <% for (var i in theme.menu){
                   if(i == 'Categories'){ %>
                     <%- list_categories({show_count: false, depth: 2, class: 'main-nav', style: 'list'}) %>

@@ -6,6 +6,7 @@ index:
   uncategorized: '未分类'
   tag: '标签：'
 nav:
+  more: 'More'
   current_page:
     other: '第 %d 页，'
   total_page:
