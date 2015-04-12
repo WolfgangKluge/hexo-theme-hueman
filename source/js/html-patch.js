@@ -30,17 +30,6 @@
           <a class="main-nav-list-link" href="javascript:;">More</a>\
           <ul class="main-nav-list-child">\
           </ul></li>').appendTo($('#main-nav'));
-        // Bind hover event
-        $('.main-nav-more').hover(
-          function(){
-            if($(window).width() < 480) return;
-            $(this).children('.main-nav-list-child').slideDown('fast');
-          },
-          function(){
-            if($(window).width() < 480) return;
-            $(this).children('.main-nav-list-child').slideUp('fast');
-          }
-        );
       }
       var child_count = $('#main-nav').children().length;
       for(var i = child_count - 2; i >= 0; i--){
@@ -60,18 +49,6 @@
     }
   }
   autoHideMenus();
-
-  // Fold second-level menu
-  $('.main-nav-list-item').hover(
-    function(){
-      if($(window).width() < 480) return;
-      $(this).children('.main-nav-list-child').slideDown('fast');
-    },
-    function(){
-      if($(window).width() < 480) return;
-      $(this).children('.main-nav-list-child').slideUp('fast');
-    }
-  );
 
   // Add second-level menu mark
   $('.main-nav-list-item').each(function(){
