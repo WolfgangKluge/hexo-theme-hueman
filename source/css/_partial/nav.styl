@@ -1,5 +1,4 @@
 $nav-link
-  float: left
   color: color-nav-foreground
   text-decoration: none
   text-shadow: 0 1px rgba(0, 0, 0, 0.2)
@@ -28,6 +27,12 @@ $nav-link
     font-size: font-size
     position: relative
     cursor: pointer
+  #main-nav-opener:checked
+    ~ .nav-container-inner
+      display: block
+    ~ #main-nav-toggle
+      &:before
+        content: "\f00d"
   #main-nav-toggle
     display: none
     width: 100%
@@ -38,13 +43,18 @@ $nav-link
       content: "\f0c9"
   .nav-container-inner
     clearfix()
+    .js-on &
+      height: 50px
     #main-nav
-      float: left
+      display: inline-block
       .main-nav-list
-        float: left
+        display: inline-block
       .main-nav-list-item
         position: relative
-        float: left
+        display: inline-block
+        &:hover
+          & > .main-nav-list-child
+            max-height: 1000px
         &.top-level-menu
           & > a:after
             content: "\f0d7" !important
@@ -68,8 +78,9 @@ $nav-link
             color: #fff
         .main-nav-list-child
           top: 100%
-          display: none
-          padding: 10px 0
+          max-height: 0
+          transition: max-height 0.2s ease-in
+          padding: 0
           overflow: hidden
           position: absolute
           width: main-nav-child-width
@@ -84,6 +95,12 @@ $nav-link
             box-sizing: border-box
     #sub-nav
       float: right
+      .js-on &
+        float: none
+        position: absolute
+        right: 15px
+        top: 0
+        background: color-nav-background
 
 .search-form
   padding: 14px 15px 16px

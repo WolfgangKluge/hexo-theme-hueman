@@ -13,12 +13,13 @@
           <% } %>
         </div>
         <div id="header-inner" class="nav-container">
-          <a id="main-nav-toggle" class="nav-icon"></a>
+          <input type="checkbox" id="main-nav-opener" style="display: none;">
+          <label for="main-nav-opener" id="main-nav-toggle" class="nav-icon"></label>
           <div class="nav-container-inner">
             <ul id="main-nav">
               <% for (var i in theme.menu){
                   if(i == 'Categories'){ %>
-                    <%- list_categories({show_count: false, depth: 2, class: 'main-nav', style: 'list'}) %>
+                    <%- list_categories({show_count: false, depth: 2, class: 'main-nav', style: 'list'}).replace(/^<ul\b[^>]*>\s*|\s*<\/ul>$/g, '') %>
                   <% } else { %>
                 <li class="main-nav-list-item" ><a class="main-nav-list-link" href="<%- url_for(theme.menu[i]) %>"><%= i %></a></li>
               <% }} %>

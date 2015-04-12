@@ -1,7 +1,4 @@
 (function($){
-  // Remove extra main nav wrap
-  $('.main-nav-list > li').unwrap();
-
   // Highlight current nav item
   $('#main-nav > li > .main-nav-list-link').each(function(){
   	if($('.page-title-link').length > 0){
