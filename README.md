@@ -1,18 +1,13 @@
-> #### This theme is ported from [AlxMedia](https://github.com/AlxMedia)'s the WordPress theme [Hueman](https://github.com/AlxMedia/hueman).
-> #### If you like Hueman, don't forget to 'Star' the project and share it with your friends! :）
-
 # Hueman
-### Probably the most beautiful theme for Hexo. [Preview](http://ppoffice.github.io/hexo-theme-hueman/)
-![](http://ppoffice.github.io/hexo-theme-hueman/gallery/preview.jpg "")
-
-##### Special thanks to [AlxMedia](https://github.com/AlxMedia), who designed the original theme [Hueman](https://github.com/AlxMedia/hueman) for wordpress.
+This [Hexo] theme is a fork from [ppoffice](https://github.com/ppoffice/hexo-theme-hueman.git) which in turn is a port from [AlxMedia](https://github.com/AlxMedia)'s the WordPress theme [Hueman](https://github.com/AlxMedia/hueman).
+If you like Hueman, don't forget to 'Star' the project and share it with your friends! :）
 
 ## Installation
 
 ### Install
 
 ``` bash
-$ git clone https://github.com/ppoffice/hexo-theme-hueman.git themes/hueman
+$ git clone https://github.com/WolfgangKluge/hexo-theme-hueman.git themes/hueman
 ```
 
 **Hueman requires Hexo 3.0.0-rc.4 and above.**
@@ -82,7 +77,7 @@ favicon: /favicon.png
 
 ## Languages
 
-English and Simplified Chinese are the default languages of the theme. You can add translations in the `languages` folder and change the default language in blog's `_config.yml`.
+English, German and Simplified Chinese (not maintained) are the default languages of the theme. You can add translations in the `languages` folder and change the default language in blog's `_config.yml`.
 
 ``` yml
 language: zh-CN
@@ -138,7 +133,7 @@ All of them are enabled by default. You can edit them in `widget` setting.
 ### Requirements
 
 - [Grunt] 0.4+
-- Hexo 3.0+
+- [Hexo] 3.0+
 
 ### Grunt tasks
 
@@ -147,7 +142,7 @@ All of them are enabled by default. You can edit them in `widget` setting.
 - **fancybox** - Only download [Fancybox].
 - **clean** - Clean temporarily files and downloaded files.
 
-[Hexo]: http://zespia.tw/hexo/
+[Hexo]: http://hexo.io/
 [Fancybox]: http://fancyapps.com/fancybox/
 [Font Awesome]: http://fontawesome.io/
 [Grunt]: http://gruntjs.com/
