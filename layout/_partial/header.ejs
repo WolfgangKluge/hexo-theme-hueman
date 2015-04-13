@@ -17,11 +17,20 @@
           <label for="main-nav-opener" id="main-nav-toggle" class="nav-icon"></label>
           <div class="nav-container-inner">
             <ul id="main-nav" data-more-text="<%= __('nav.more') %>">
-              <% for (var i in theme.menu){
+              <%
+                for (var i in theme.menu){
+                  var mnupath = theme.menu[i];
+                  if (mnupath) {
+                    if (mnupath[mnupath.length - 1] === '/') mnupath += 'index.html';
+                    if (mnupath[0] === '/') mnupath = mnupath.substr(1);
+                  }
+
+                  var isCurrent = page.path === mnupath;
+
                   if(i == 'Categories'){ %>
                     <%- list_categories({show_count: false, depth: 2, class: 'main-nav', style: 'list'}).replace(/^<ul\b[^>]*>\s*|\s*<\/ul>$/g, '') %>
                   <% } else { %>
-                <li class="main-nav-list-item" ><a class="main-nav-list-link" href="<%- url_for(theme.menu[i]) %>"><%= i %></a></li>
+                <li class="main-nav-list-item"><a class="main-nav-list-link<%= isCurrent ? ' current' : '' %>" href="<%- url_for(theme.menu[i]) %>"><%= i %></a></li>
               <% }} %>
             </ul>
             <nav id="sub-nav">

@@ -1,15 +1,4 @@
 (function($){
-  // Highlight current nav item
-  $('#main-nav > li > .main-nav-list-link').each(function(){
-  	if($('.page-title-link').length > 0){
-      if($(this).html().toUpperCase() == $('.page-title-link').html().toUpperCase()){
-        $(this).addClass('current');
-      } else if ($(this).attr('href') == $('.page-title-link').attr('data-url')){
-        $(this).addClass('current');
-      }
-    }
-  });
-
   // Set thumbnail height
   function setThumbnailHeight(){
     var width = $('.article-summary .thumbnail').width();
