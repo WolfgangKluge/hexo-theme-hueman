@@ -1,16 +1,33 @@
-// https://github.com/chriskempson/tomorrow-theme
-highlight-background = #2d2d2d
-highlight-current-line = #393939
-highlight-selection = #515151
-highlight-foreground = #cccccc
-highlight-comment = #999999
-highlight-red = #f2777a
-highlight-orange = #f99157
-highlight-yellow = #ffcc66
-highlight-green = #99cc99
-highlight-aqua = #66cccc
-highlight-blue = #6699cc
-highlight-purple = #cc99cc
+/*
+
+Sunburst-like style (c) Vasily Polovnyov <vast@whiteants.net>
+
+*/
+
+highlight-background = #000000
+highlight-foreground = #f8f8f8
+highlight-comment = #aeaeae
+highlight-keyword = #e28964
+highlight-method = #99cf50
+highlight-name = #65b042
+highlight-subst = #daefa3
+highlight-tag = #89bdff
+highlight-number = #3387cc
+
+highlight-regexp = #e9c062
+highlight-variable = #3e87e3
+highlight-pseudo = #cda869
+highlight-css-class = #9b703f
+highlight-rule-keyword = #c5af75
+highlight-rule-value = #cf6a4c
+highlight-css-id = #8b98ab
+highlight-annotation = #9b859d
+highlight-pragma = #8996a8
+highlight-css-function = #dad085
+highlight-hexcolor = #dd7b3b
+
+highlight-group = #CCBBFF
+highlight-group2 = #BBCCEE
 
 $code-block
   background: highlight-background
@@ -89,7 +106,7 @@ $line-numbers
         .line-data
           padding: 0 !important
       .highlight
-        margin: 0
+        margin: 0ta
         padding: 0
         border: none
       .gist-meta
@@ -106,52 +123,161 @@ $line-numbers
           &:hover
             text-decoration: underline
 
+
+
 pre
   .comment
-  .title
     color: highlight-comment
-  .variable
-  .attribute
-  .tag
-  .regexp
-  .ruby .constant
-  .xml .tag .title
-  .xml .pi
-  .xml .doctype
-  .html .doctype
-  .css .id
-  .css .class
-  .css .pseudo
-    color: highlight-red
+
+  .keyword,
+  .ruby & .function .keyword,
+  .request,
+  .status,
+  .nginx & .title
+    color: highlight-keyword
+
+
+  .function .keyword,
+  .sub .keyword,
+  .method,
+  .list .title
+    color: highlight-method
+
+  .string,
+  .tag .value,
+  .cdata,
+  .filter .argument,
+  .attr_selector,
+  .apache & .cbracket,
+  .date,
+  .tex & .command,
+  .coffeescript & .attribute,
+  .name
+  .anchor
+    color: highlight-name
+
+  .subst,
+  .char
+    color: highlight-subst
+
+  .regexp,
+  .quantifier
+    color: highlight-regexp
+
+  .qnumber
+    color: lighten(highlight-regexp, 50%)
+
+  .title,
+  .sub .identifier,
+  .pi,
+  .tag,
+  .tag .keyword,
+  .decorator,
+  .shebang,
+  .prompt
+    color: highlight-tag
+
+  .class .title,
+  .type,
+  .smalltalk & .class,
+  .javadoctag,
+  .yardoctag,
+  .phpdoc,
+  .dartdoc
+    text-decoration: underline
+
+  .symbol,
+  .ruby & .symbol .string,
   .number
-  .preprocessor
-  .built_in
-  .literal
-  .params
-  .constant
-    color: highlight-orange
-  .class
-  .ruby .class .title
-  .css .rules .attribute
-    color: highlight-green
-  .string
-  .value
-  .inheritance
-  .header
-  .ruby .symbol
-  .xml .cdata
-    color: highlight-green
-  .css .hexcolor
-    color: highlight-aqua
-  .function
-  .python .decorator
-  .python .title
-  .ruby .function .title
-  .ruby .title .keyword
-  .perl .sub
-  .javascript .title
-  .coffeescript .title
-    color: highlight-blue
-  .keyword
-  .javascript .function
-    color: highlight-purple
+    color: highlight-number
+
+
+  .params,
+  .variable,
+  .clojure & .attribute
+    color: highlight-variable
+
+  .group
+    color: darken(highlight-group, 0%)
+  .group1
+    color: darken(highlight-group, 10%)
+  .group2
+    color: darken(highlight-group2, 0%)
+  .group3
+    color: darken(highlight-group2, 15%)
+  .group4
+    color: darken(highlight-group2, 25%)
+
+  .css & .tag,
+  .rule .property,
+  .pseudo,
+  .set,
+  .tex & .special
+    color: highlight-pseudo
+
+
+  .css & .class
+    color: highlight-css-class
+
+  .rule .keyword
+    color: highlight-rule-keyword
+
+  .rule .value,
+  .preset
+    color: highlight-rule-value
+
+  .ref
+    color: lighten(highlight-rule-value, 45%)
+
+  .css & .id
+    color: highlight-css-id
+
+  .annotation,
+  .apache & .sqbracket,
+  .nginx & .built_in,
+  .options
+    color: highlight-annotation
+
+  .preprocessor,
+  .pragma,
+  .range
+    color: highlight-pragma
+
+
+  .hexcolor,
+  .css & .value .number
+    color: highlight-hexcolor
+
+
+  .css & .function
+    color: highlight-css-function
+
+
+  .diff & .header,
+  .chunk,
+  .tex & .formula
+    background-color: #0e2231
+    color: #f8f8f8
+    font-style: italic
+
+  .diff & .change
+    background-color: #4a410d
+    color: #f8f8f8
+
+
+  .addition
+    background-color: #253b22
+    color: #f8f8f8
+
+  .deletion
+    background-color: #420e09
+    color: #f8f8f8
+
+  .coffeescript & .javascript,
+  .javascript & .xml,
+  .tex & .hljs-formula,
+  .xml & .javascript,
+  .xml & .vbscript,
+  .xml & .css,
+  .xml & .hljs-cdata
+    opacity: 0.5
