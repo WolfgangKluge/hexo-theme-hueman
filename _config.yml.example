@@ -43,6 +43,7 @@ links:
 use_google_apis: false
 
 # Miscellaneous
+use_local_jquery: 
 webfont: false # Don't use webfonts (except FontAwesome)
 google_analytics:
 favicon: /favicon.png
