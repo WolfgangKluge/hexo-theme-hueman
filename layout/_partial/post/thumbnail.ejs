@@ -1,15 +1,17 @@
 <% if(theme.thumbnail == true) { %>
 <a href="<%- url_for((post.link?post.link:post.path)) %>" class="thumbnail">
   <%
-    var img=/\<img\s.*?\s?src\s*=\s*['|"]?([^\s'"]+).*?\>/ig;
-    var result = post.content.match(img);
+    var img = /<img\s[\s\S]*?\bsrc\s*=\s*(?:"([^"]*)"|'([^']*)'|(\S+))[\s\S]*?>/ig;
     var s = "";
-    result = img.exec(post.content);
+    var result = img.exec(post.content);
     if(result != null) {
       for(var i = result.length -1; i; --i){
+        if (result[i] != null) {
           s += result[i]+"\n";
+        }
       }
     }
+
     if(s.length > 0){
       if(config.post_asset_folder){
         var pattern = /^[\\{0,1}\/{0,1}]([^\/^\\]+)/,
