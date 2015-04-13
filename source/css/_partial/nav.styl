@@ -104,25 +104,27 @@ $nav-link
         background: color-nav-background
 
 .search-form
-  padding: 14px 15px 16px
+  padding: 10px 0 16px 15px
   height: 50px
   overflow: hidden
   box-sizing: border-box
   &:before
     content: "\f002"
+    cursor: default
     margin-right: 8px
     color: color-nav-foreground
     font: normal normal normal 16px/1 FontAwesome
 
 .search-form-input
   width: 100px
-  border: none
+  border: 1px solid (color-nav-background + 20%)
   outline: none
   background: none
   line-height: line-height
-  transition: 0.2s ease-in
+  transition: width 0.2s ease-in
   font: 16px font-sans
   color: color-nav-foreground
+  padding: 4px
   &:focus
     width: 200px
   &::-webkit-search-results-decoration
