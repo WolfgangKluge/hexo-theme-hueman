@@ -28,7 +28,7 @@
                   var isCurrent = page.path === mnupath;
 
                   if(i == 'Categories'){ %>
-                    <%- list_categories({show_count: false, depth: 2, class: 'main-nav', style: 'list'}).replace(/^<ul\b[^>]*>\s*|\s*<\/ul>$/g, '') %>
+                    <%- list_categories({show_count: false, depth: 2, class: 'main-nav', style: 'list', show_current: true}).replace(/^<ul\b[^>]*>\s*|\s*<\/ul>$/g, '') %>
                   <% } else { %>
                 <li class="main-nav-list-item"><a class="main-nav-list-link<%= isCurrent ? ' current' : '' %>" href="<%- url_for(theme.menu[i]) %>"><%= i %></a></li>
               <% }} %>
