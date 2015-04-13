@@ -57,7 +57,7 @@
       margin-bottom: 10px
       font-size: 22px
       font-weight: 400
-      line-height: 1.5em
+      line-height: 1.25em
       word-wrap: break-word
       a
         transition: color 0.3s ease-in
@@ -88,7 +88,7 @@
 
 .article-title
   text-decoration: none
-  font-size: 38px
+  font-size: 30px
   letter-spacing: -1px
   color: color-default
   line-height: line-height-title
@@ -115,7 +115,9 @@
     font-weight: 600
   h1, h2, h3, h4, h5, h6
     line-height: line-height-title
-    margin: line-height-title 0
+    margin: line-height-title 0 0
+    & + p
+      margin-top: 0;
   a
     color: color-link
     text-decoration: none
@@ -160,7 +162,6 @@
           padding: 0 0.5em
   .pullquote
     text-align: left
-    width: 45%
     margin: 0
     &.left
       margin-left: 0.5em
