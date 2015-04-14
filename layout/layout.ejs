@@ -1,5 +1,6 @@
 <%- partial('_partial/head') %>
 <body>
+  <!--[if lte IE 8]><iefix xmlns="html5"><![endif]-->
   <div id="wrap">
     <%- partial('_partial/header', null, {cache: !config.relative_link}) %>
     <div class="container">
@@ -45,5 +46,6 @@ if (page.archive){
     <%- partial('_partial/footer', null, {cache: !config.relative_link}) %>
     <%- partial('_partial/after-footer') %>
   </div>
+  <!--[if lte IE 8]></iefix><![endif]-->
 </body>
 </html>
