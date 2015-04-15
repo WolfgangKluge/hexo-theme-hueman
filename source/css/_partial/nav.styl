@@ -86,7 +86,7 @@ $nav-link
           overflow: hidden
           position: absolute
           min-width: main-nav-child-width
-          background: color-nav-background url(images/opacity-10.png) repeat
+          background: mix(color-nav-background, #000000, 90%)
           li
             box-shadow: 0 1px 0 rgba(255,255,255,0.06)
             &:last-child
@@ -97,6 +97,7 @@ $nav-link
             box-sizing: border-box
     #sub-nav
       float: right
+      display: block
       .js-on &
         float: none
         position: absolute
