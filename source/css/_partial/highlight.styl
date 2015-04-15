@@ -60,6 +60,7 @@ $line-numbers
       padding: 0
   .highlight
     @extend $code-block
+    display: block
     pre
       border: none
       margin: 0
@@ -70,8 +71,9 @@ $line-numbers
     td
       border: none
       padding: 0
-    figcaption
+    .subject
       clearfix()
+      display: block
       font-size: 0.85em
       color: highlight-comment
       line-height: 1em
