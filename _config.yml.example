@@ -1,7 +1,10 @@
 # Logo Url
-# Please enter the absolute path to your logo file
-# or remove the following line with replacing logo-header.png with your own logo
-logo: http://ppoffice.github.io/hexo-theme-hueman/css/images/logo-header.png
+# Please enter the absolute path to your logo file and specify its size
+# or remove the following lines with replacing logo-header.png with your own logo
+logo:
+  src: http://ppoffice.github.io/hexo-theme-hueman/css/images/logo-header.png
+  width: 165
+  height: 60
 
 # Header
 menu:

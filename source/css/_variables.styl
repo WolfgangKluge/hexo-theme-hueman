@@ -41,9 +41,24 @@ line-height = 1.4em
 line-height-title = 1.3em
 
 // Header
-logo-img = "images/logo-header.png"
-logo-width = 165px
-logo-height = 60px
+if hexo-config('logo')
+  src = hexo-config('logo.src')
+  width = hexo-config('logo.width')
+  height = hexo-config('logo.height')
+
+  if src || width || height
+    if src
+      logo-img = src
+    if width
+      logo-width = (width)px
+    if height
+      logo-height = (height)px
+  else
+    logo-img = hexo-config('logo')
+
+logo-img ?= "images/logo-header.png"
+logo-width ?= 165px
+logo-height ?= 60px
 
 // Sidebar
 sidebar = hexo-config("sidebar")
